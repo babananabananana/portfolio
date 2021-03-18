@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
 .synopsis{
   font-style: italic;
 }
@@ -6,13 +12,8 @@
   font-style: normal;
 }
 
-.page {
-  width: 600px;
-  margin: 0 auto;
-}
-
 .sidebar ul{
-  list-style-type: nons;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -21,7 +22,7 @@
   border: 1px solid #555;
 }
 .sidebar li{
-  float:left;
+  float:center;
   border-right: 1px solid #bbb;
   /* display: block;
   color: #000;
@@ -51,6 +52,49 @@
   color: white;
 }
 
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width:100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #D6E9FE; */
+}
+
+.section h1, h2 {
+  width: 60%;
+  justify-content: center;
+}
+.section ul, ol {
+  justify-content: left;
+}
+
+.head {
+  height: 80px;
+}
+
+.title {
+  height:150px;
+  border: 1px solid #fff;
+}
+
+.projects,
+.experience {
+  display: flex;
+  width: 100%%;
+  align-items: center;
+
+}
+
+.contact {
+  width: 100%;
+}
+
 
 #github-button:link,
 #github-button:visited{
@@ -78,4 +122,34 @@
 #github-button:visited:active{
   color: #FFF;
   background-color: #5995DA;
+}
+
+@media only screen and (min-width: 400px){
+  /* body{ */
+      /* background-color: #F09A9D; */
+    /* } */
+  .sidebar{
+    width: 100%;
+  }
+  .section {
+    border-bottom: 1px solid #fff;
+  }
+
+}
+
+
+@media only screen and (min-width:961px){
+  /* body {
+    background-color: #B2D6FF;
+  } */
+  .sidebar{
+    width: 960px;
+  }
+  .page {
+    width: 960px;
+  }
+  .sidebar li {
+    float: left;
+  }
+
 }
